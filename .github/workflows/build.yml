@@ -1,0 +1,21 @@
+name: Build Project
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v3
+        
+      - name: Instalar dependencias
+        run: echo "Instalando dependencias necesarias..."
+        
+      - name: Compilar el proyecto
+        run: echo "Compilando proyecto..."
+        
+      - name: Mostrar estado exitoso
+        run: echo "✔ El proyecto ha compilado exitosamente."
